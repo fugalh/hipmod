@@ -1,0 +1,34 @@
+hipmod combines the simplicity of the Hipster PDA[1], the beauty of the D*I*Y
+Planner[2], and the cleverness of the pocketmod[3] into one excuse-free PDA.
+
+Usage
+-----
+Choose the 8 pages out of core.pdf which you would like to use, and create the
+hipmod with a command like the following:
+
+    ./hipmod -page 86,26,46,26,46,82,84,89 core.pdf
+
+The result will be in core-up.pdf. If you have an 8-page PDF, you can simply
+run this command to impose it:
+
+    ./hipmod master.pdf
+
+Again, the result is in master-up.pdf. You can bring any PDF to the party, by
+first merging with core, e.g.:
+
+    ./multivalent merge -append core.pdf circle_of_fifths.pdf
+
+See pocketmod.com for instructions on folding your hipmod.
+
+Requirements
+------------
+You need Java and a bourne shell. The Multivalent jar is included.
+
+Author
+------
+Hans Fugal <hans@fugal.net>
+
+1. http://www.43folders.com/2004/09/03/introducing-the-hipster-pda
+2. http://diyplanner.com/
+3. http://www.pocketmod.com/
+4. http://multivalent.sourceforge.net/
