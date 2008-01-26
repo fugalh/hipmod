@@ -1,6 +1,6 @@
-#!/bin/sh -x
+#!/bin/sh
 
 PAPER=letter
 SEP=1
 
-exec multivalent impose -dim 2x4 -layout 1l,2r,8l,3r,7l,4r,6l,5r -sep $SEP -paper $PAPER -verbose "$@"
+exec multivalent impose -dim 2x4 -layout 1l,2r,8l,3r,7l,4r,6l,5r -sep $SEP -paper $PAPER "$@"
