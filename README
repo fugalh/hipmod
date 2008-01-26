@@ -20,6 +20,9 @@ first merging with core, e.g.:
 
 See pocketmod.com for instructions on folding your hipmod.
 
+If you are lucky enough to live where A4 paper is used, modify the hipmod
+script appropriately.
+
 Requirements
 ------------
 You need Java and a bourne shell. The Multivalent jar is included.
