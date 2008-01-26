@@ -1,0 +1,11 @@
+#!/bin/sh
+if [ $# -lt 1 ]; then
+  echo "usage: $0 <tool> [options]"
+  exit 1
+fi
+
+cmd=$1
+cmd=$(echo ${cmd:0:1} | tr 'a-z' 'A-Z')${cmd:1}
+shift
+
+exec java -classpath Multivalent.jar tool.pdf.$cmd "$@"
