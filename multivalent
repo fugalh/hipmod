@@ -1,6 +1,12 @@
 #!/bin/sh
+#jar="$(dirname "$0")/Multivalent.jar"
+jar=$HOME/lib/Multivalent.jar
 if [ $# -lt 1 ]; then
-  echo "usage: $0 <tool> [options]"
+  cat <<EOF  
+usage: $0 <tool> [options]
+  where <tool> is one of compress, uncompress, impose, info, decrypt,
+                         encrypt, split, merge, repair, validate, undo.
+EOF
   exit 1
 fi
 
@@ -8,4 +14,4 @@ cmd=$1
 cmd=$(echo ${cmd:0:1} | tr 'a-z' 'A-Z')${cmd:1}
 shift
 
-exec java -classpath Multivalent.jar tool.pdf.$cmd "$@"
+exec java -classpath "$jar" tool.pdf.$cmd "$@"
